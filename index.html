@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Developer portfolio" />
+    <meta name="theme-color" content="#08090d" />
+    <title>Portfolio — Developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <script>
+      (() => {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+      })();
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'sans-serif'], display: ['Sora', 'sans-serif'] },
+            colors: {
+              ink: 'rgb(var(--ink) / <alpha-value>)',
+              surface: 'rgb(var(--surface) / <alpha-value>)',
+              muted: 'rgb(var(--muted) / <alpha-value>)',
+              brand: 'rgb(var(--brand) / <alpha-value>)'
+            }
+          }
+        }
+      };
+    </script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body class="min-h-screen bg-surface font-sans text-ink antialiased transition-colors duration-300">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="fixed inset-x-0 top-4 z-50 px-4 sm:top-6 sm:px-6">
+      <nav class="glass-nav mx-auto flex max-w-5xl items-center justify-between px-4 py-3 sm:px-5" aria-label="Primary navigation">
+        <a class="brand-mark focus-ring" href="#main-content" aria-label="Go to homepage">
+          <span class="brand-mark__name">Manoj R</span>
+          <span class="brand-mark__accent" aria-hidden="true"></span>
+        </a>
+
+        <div class="hidden items-center gap-1 md:flex">
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#certificates">Certificates</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#process">Process</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button class="icon-button focus-ring" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false">
+            <svg class="h-4 w-4" data-theme-icon aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"></svg>
+          </button>
+          <button class="icon-button focus-ring md:hidden" type="button" data-menu-toggle aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg class="h-5 w-5" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+          </button>
+        </div>
+      </nav>
+
+      <div id="mobile-menu" class="mobile-menu glass-nav mx-auto mt-2 max-w-5xl px-3 py-3 md:hidden" hidden>
+        <a class="nav-link block px-3 py-2" href="#about">About</a>
+        <a class="nav-link block px-3 py-2" href="#work">Work</a>
+        <a class="nav-link block px-3 py-2" href="#certificates">Certificates</a>
+        <a class="nav-link block px-3 py-2" href="#skills">Skills</a>
+        <a class="nav-link block px-3 py-2" href="#services">Services</a>
+        <a class="nav-link block px-3 py-2" href="#process">Process</a>
+        <a class="nav-link block px-3 py-2" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1" aria-label="Portfolio content">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy" data-gsap="hero-copy">
+          <p class="availability"><span aria-hidden="true"></span>Available for Freelance &amp; Internship</p>
+          <p class="eyebrow">Hello, I’m Manoj R</p>
+          <h1 id="hero-title" class="display-title hero-title">AI-Powered<br /><span>Web Developer</span></h1>
+          <p class="body-copy hero-description">I build modern, responsive business websites and thoughtful web experiences that help ambitious ideas look credible, work beautifully, and move people to act.</p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="button-primary focus-ring" href="#work">View Featured Work <span aria-hidden="true">↗</span></a>
+            <a class="button-secondary focus-ring" href="#contact">Get In Touch <span aria-hidden="true">→</span></a>
+          </div>
+          <dl class="hero-stats" data-gsap="hero-stats">
+            <div class="stat-card"><dt>Projects Built</dt><dd data-count="12" data-suffix="+">0</dd></div>
+            <div class="stat-card"><dt>Certifications</dt><dd data-count="6" data-suffix="+">0</dd></div>
+            <div class="stat-card"><dt>Technologies</dt><dd data-count="15" data-suffix="+">0</dd></div>
+          </dl>
+        </div>
+
+        <div class="project-showcase" data-gsap="project-showcase" aria-label="Featured project previews">
+          <div class="showcase-glow" aria-hidden="true"></div>
+
+          <article class="project-preview hero-project-card hero-project-card--primary restaurant" data-gsap="project-card">
+            <div class="hero-project-card__media">
+              <img src="./assets/images/projects/restaurant.png" alt="Restaurant Website homepage preview" width="1905" height="928" loading="eager" decoding="async" />
+            </div>
+            <div class="hero-project-card__label"><span>Restaurant Website</span></div>
+          </article>
+
+          <article class="project-preview hero-project-card hero-project-card--secondary gym" data-gsap="project-card">
+            <div class="hero-project-card__media">
+              <img src="./assets/images/projects/gym.png" alt="Gym Website homepage preview" width="1907" height="927" loading="eager" decoding="async" />
+            </div>
+            <div class="hero-project-card__label"><span>Gym Website</span></div>
+          </article>
+
+          <article class="project-preview hero-project-card hero-project-card--tertiary coaching" data-gsap="project-card">
+            <div class="hero-project-card__media">
+              <img src="./assets/images/projects/coaching-center.png" alt="Coaching Center Website homepage preview" width="1901" height="930" loading="eager" decoding="async" />
+            </div>
+            <div class="hero-project-card__label"><span>Coaching Center</span></div>
+          </article>
+
+          <article class="project-preview hero-project-card hero-project-card--accent rezonx" data-gsap="project-card" aria-hidden="true">
+            <div class="hero-project-card__media">
+              <img src="./assets/images/projects/rezonx.png" alt="" width="1915" height="931" loading="eager" decoding="async" />
+            </div>
+            <div class="hero-project-card__label"><span>RezonX Club</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="tech-stack" aria-labelledby="tech-title">
+        <div class="section-shell tech-stack-inner">
+          <div class="tech-stack-heading">
+            <p class="eyebrow">Tools I work with</p>
+            <h2 id="tech-title" class="display-title">Tech Stack</h2>
+          </div>
+          <div class="tech-marquee" tabindex="0" aria-label="Technology stack. Hover or focus to pause the scrolling list.">
+            <div class="tech-track">
+              <ul class="tech-list" role="list">
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#e34f26" d="M3 2h18l-1.6 18.1L12 22l-7.4-1.9z"/><path fill="#fff" d="m12 19 5.3-1.5.5-5.8H9.5l.2 2h5.9l-.2 2.2-3.4.9-3.4-.9-.2-2.4h-2l.4 4zM6.3 6l.2 2h11.7l.2-2z"/></svg><span>HTML5</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#1572b6" d="M3 2h18l-1.6 18.1L12 22l-7.4-1.9z"/><path fill="#fff" d="m6.3 6 .2 2h7.1l-.1 2H8.4l.2 2h4.7l-.2 2-1.1.3-1.1-.3-.1-1.2h-2l.2 2.7 3 0.8 3-.8.5-6.5H8.5l-.1-1z"/></svg><span>CSS3</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#38bdf8" d="M3.2 6.5 12 2l8.8 4.5L12 11zM3.2 12 12 7.5l8.8 4.5L12 16.5zM3.2 17.5 12 13l8.8 4.5L12 22z"/></svg><span>Tailwind CSS</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7952b3" d="M3 5a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path fill="#fff" d="M8.5 7.5h4.3a2.3 2.3 0 0 1 1.4 4 2.5 2.5 0 0 1-1.8 4.4H8.5zm2.1 1.7v1.6h1.8c1.1 0 1.1-1.6 0-1.6zm0 3.3v1.8h2c1.2 0 1.2-1.8 0-1.8z"/></svg><span>Bootstrap</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f7df1e" d="M3 3h18v18H3z"/><path fill="#242424" d="M15.7 17.1c.4.6.9 1 1.8 1 0 .8-.8 1-1.4 1-1 0-1.7-.5-2.1-1.3l1.1-.7c.2.4.4.7.6 1m-3.3.5c.3.6.6.8 1.2.8.6 0 1-.2 1-.9v-5h1.6v5c0 1.5-.9 2.2-2.2 2.2-1.2 0-1.9-.6-2.5-1.8z"/></svg><span>JavaScript</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#3776ab" d="M12 2c-5 0-4.7 2.2-4.7 2.2v2.3H12v.7H5.4S2 6.8 2 12s3 4.9 3 4.9h1.8v-2.5s-.1-3 3-3h5.1s2.8 0 2.8-2.7V4.8S18.2 2 12 2m-2.6 1.6a.8.8 0 1 1 0 1.6.8.8 0 0 1 0-1.6"/><path fill="#ffd343" d="M12 22c5 0 4.7-2.2 4.7-2.2v-2.3H12v-.7h6.6s3.4.4 3.4-4.8-3-4.9-3-4.9h-1.8v2.5s.1 3-3 3H8.9s-2.8 0-2.8 2.7v3.9S5.8 22 12 22m2.6-1.6a.8.8 0 1 1 0-1.6.8.8 0 0 1 0 1.6"/></svg><span>Python</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3" fill="#0ea5e9"/><path fill="#0ea5e9" d="M4 5v7c0 4 16 4 16 0V5c0 4-16 4-16 0m0 7v7c0 4 16 4 16 0v-7c0 4-16 4-16 0"/></svg><span>SQL</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#f05133" d="m21.6 10.1-7.7 7.7-7.7-7.7L12 4.4z"/><path fill="#fff" d="m9.4 10.1 2.5 2.5v3.2l-5-5zm5.2 0 2.5-2.5 2.5 2.5-5 5v-3.2z"/></svg><span>Git</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.9.1-.6.4-1.1.7-1.3-2.3-.3-4.7-1.2-4.7-5.2 0-1.2.4-2.1 1-2.9-.1-.3-.4-1.4.1-2.9 0 0 .8-.3 3 1.1a10 10 0 0 1 5.4 0c2.1-1.4 3-1.1 3-1.1.5 1.5.2 2.6.1 2.9.7.8 1 1.7 1 2.9 0 4-2.4 4.9-4.7 5.2.4.3.7.9.7 1.8V21c0 .3.2.6.7.5A10 10 0 0 0 12 2"/></svg><span>GitHub</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M12 2 22 20H2z"/><path fill="#050505" d="m12 6 5.6 10H6.4z"/></svg><span>Vercel</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#23a9f2" d="M17.5 2.6 9.1 6.9 4.5 4.6 2 5.9v12.2l2.5 1.3 4.6-2.3 8.4 4.3L22 19.1V4.9z"/><path fill="#fff" d="m9.1 8.5 4.7 3.5-4.7 3.5-2.6-1.3L9.7 12 6.5 9.8z"/></svg><span>VS Code</span></li>
+                <li class="tech-item"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5" fill="#a78bfa"/><path fill="#fff" d="M7 19h10v1H7zm5-11a3 3 0 1 1 0 6 3 3 0 0 1 0-6m0 1.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3"/></svg><span>Responsive Design</span></li>
+              </ul>
+              <ul class="tech-list" role="list" aria-hidden="true">
+                <li class="tech-item">HTML5</li><li class="tech-item">CSS3</li><li class="tech-item">Tailwind CSS</li><li class="tech-item">Bootstrap</li><li class="tech-item">JavaScript</li><li class="tech-item">Python</li><li class="tech-item">SQL</li><li class="tech-item">Git</li><li class="tech-item">GitHub</li><li class="tech-item">Vercel</li><li class="tech-item">VS Code</li><li class="tech-item">Responsive Design</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="featured-work section-shell" aria-labelledby="work-title">
+        <div class="work-heading" data-reveal>
+          <p class="eyebrow">Selected projects</p>
+          <h2 id="work-title" class="display-title">Featured Work</h2>
+          <p class="body-copy">A selection of purposeful interfaces built to make a strong first impression and turn attention into action.</p>
+        </div>
+        <div id="project-showcase" class="project-showcase-list" aria-live="polite"></div>
+      </section>
+
+      <section id="about" class="about-section section-shell" aria-labelledby="about-title">
+        <div class="about-grid">
+          <div class="about-portrait-card" data-reveal>
+            <div class="about-portrait-frame">
+              <img src="./assets/images/projects/profile/profile.jpeg" alt="Portrait of Manoj R" width="640" height="800" loading="lazy" decoding="async" />
+            </div>
+          </div>
+
+          <div class="about-content" data-reveal>
+            <p class="eyebrow">About Me</p>
+            <h2 id="about-title" class="display-title">Building thoughtful digital experiences with clarity and purpose.</h2>
+            <p class="body-copy about-intro">I’m Manoj R, a Computer Science Engineering student exploring AI-powered web development and creating modern, responsive websites for businesses, creators, and ambitious brands.</p>
+
+            <div class="about-card-grid" role="list">
+              <article class="about-card" role="listitem">
+                <h3>Current Focus</h3>
+                <ul class="about-list">
+                  <li>Frontend development</li>
+                  <li>AI-assisted web experiences</li>
+                  <li>Responsive business websites</li>
+                </ul>
+              </article>
+
+              <article class="about-card" role="listitem">
+                <h3>Education</h3>
+                <ul class="about-list">
+                  <li>Computer Science Engineering student</li>
+                  <li>Focused on practical web projects</li>
+                  <li>Learning modern UI and performance</li>
+                </ul>
+              </article>
+
+              <article class="about-card" role="listitem">
+                <h3>Skills Summary</h3>
+                <ul class="about-list">
+                  <li>HTML, CSS, Tailwind CSS</li>
+                  <li>JavaScript, Python, SQL</li>
+                  <li>Git, GitHub, Vercel</li>
+                </ul>
+              </article>
+
+              <article class="about-card" role="listitem">
+                <h3>What I’m Looking For</h3>
+                <ul class="about-list">
+                  <li>Internship opportunities</li>
+                  <li>Freelance collaborations</li>
+                  <li>Meaningful product-driven work</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="about-tech-list" aria-label="Core technologies">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Tailwind CSS</span>
+              <span>JavaScript</span>
+              <span>Python</span>
+              <span>SQL</span>
+              <span>Git</span>
+              <span>GitHub</span>
+            </div>
+
+            <div class="about-actions">
+              <a class="button-primary focus-ring" href="#contact">Let’s Build Something Together <span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="certificates" class="certificates-section section-shell" aria-labelledby="certificates-title">
+        <div class="certificates-heading" data-reveal>
+          <p class="eyebrow">Certifications</p>
+          <h2 id="certificates-title" class="display-title">Verified learning with a practical foundation.</h2>
+          <p class="body-copy">Two NxtWave — CCBP 4.0 Academy certificates that reflect hands-on progress in web fundamentals and responsive design.</p>
+        </div>
+
+        <div class="certificate-grid">
+          <article class="certificate-card" data-reveal>
+            <div class="certificate-media">
+              <img src="./assets/images/certificates/static-website-certificate.png" alt="Certificate for the Static Website course by NxtWave CCBP 4.0 Academy" loading="lazy" decoding="async" />
+            </div>
+            <div class="certificate-content">
+              <div class="certificate-meta">
+                <p class="certificate-chip">NxtWave — CCBP 4.0 Academy</p>
+                <h3>Static Website</h3>
+              </div>
+              <p class="body-copy">Certificate of Achievement for successfully completing the Static Website course, covering HTML, CSS, and Bootstrap.</p>
+              <a class="button-secondary focus-ring certificate-link" href="https://certificates.ccbp.in/academy/static-website?id=KVIKNGNATD" target="_blank" rel="noopener noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="certificate-card" data-reveal>
+            <div class="certificate-media">
+              <img src="./assets/images/certificates/responsive-website-certificate.png" alt="Certificate for the Build Your Own Responsive Website course by NxtWave CCBP 4.0 Academy" loading="lazy" decoding="async" />
+            </div>
+            <div class="certificate-content">
+              <div class="certificate-meta">
+                <p class="certificate-chip">NxtWave — CCBP 4.0 Academy</p>
+                <h3>Build Your Own Responsive Website</h3>
+              </div>
+              <p class="body-copy">Certificate of Achievement for successfully completing the Build Your Own Responsive Website course, covering Bootstrap and Flexbox.</p>
+              <a class="button-secondary focus-ring certificate-link" href="https://certificates.ccbp.in/academy/build-your-own-responsive-website?id=GNBIGEDOAE" target="_blank" rel="noopener noreferrer">View Certificate <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="skills-section section-shell" aria-labelledby="skills-title">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Expertise</p>
+          <h2 id="skills-title" class="display-title">More Than Just Writing Code</h2>
+          <p class="body-copy">I focus on building websites that are clear, responsive, visually polished, and useful for the people and businesses they serve.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card" data-reveal>
+            <p class="skill-card__eyebrow">Frontend Development</p>
+            <h3>Responsive and modern websites built with structure and clarity.</h3>
+            <p class="body-copy">Building polished user experiences with semantic HTML, CSS, Bootstrap, Flexbox, and JavaScript.</p>
+            <ul class="skill-list">
+              <li>Semantic HTML</li>
+              <li>Responsive CSS</li>
+              <li>Bootstrap 5</li>
+              <li>Flexbox</li>
+              <li>JavaScript fundamentals</li>
+              <li>Mobile-first layouts</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <p class="skill-card__eyebrow">UI / UX Implementation</p>
+            <h3>Design ideas turned into practical and usable interfaces.</h3>
+            <p class="body-copy">Translating visual references into clean layouts with thoughtful hierarchy, spacing, and clear actions.</p>
+            <ul class="skill-list">
+              <li>Visual hierarchy</li>
+              <li>Responsive layouts</li>
+              <li>Component-based thinking</li>
+              <li>Spacing and typography systems</li>
+              <li>Clear calls-to-action</li>
+              <li>User-friendly navigation</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <p class="skill-card__eyebrow">Business Website Development</p>
+            <h3>Websites designed to build trust and generate enquiries.</h3>
+            <p class="body-copy">Creating websites that help businesses look credible, explain their offer clearly, and encourage action.</p>
+            <ul class="skill-list">
+              <li>Business websites</li>
+              <li>Restaurant websites</li>
+              <li>Gym and fitness websites</li>
+              <li>Coaching center websites</li>
+              <li>Portfolio websites</li>
+              <li>Landing pages</li>
+            </ul>
+          </article>
+
+          <article class="skill-card" data-reveal>
+            <p class="skill-card__eyebrow">Quality & Delivery</p>
+            <h3>Professional implementation focused on reliability and real-world use.</h3>
+            <p class="body-copy">Attention to responsiveness, accessibility, performance, structure, and the details that make a website feel finished.</p>
+            <ul class="skill-list">
+              <li>Responsive testing</li>
+              <li>Accessibility-conscious markup</li>
+              <li>Performance-aware implementation</li>
+              <li>SEO-friendly structure</li>
+              <li>Clear content hierarchy</li>
+              <li>Git and GitHub workflow</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" class="services-section section-shell" aria-labelledby="services-title">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">Services</p>
+          <h2 id="services-title" class="display-title">Websites Built Around Your Goals</h2>
+          <p class="body-copy">I build modern, responsive websites that help businesses present themselves professionally, build trust, and make it easier for customers to take action.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">01</div>
+            <h3>Business Websites</h3>
+            <p class="body-copy">Professional online presence for local businesses with clear services, information, and contact paths.</p>
+            <ul class="service-list">
+              <li>Responsive multi-section website</li>
+              <li>Business information</li>
+              <li>Services showcase</li>
+              <li>Contact and enquiry CTAs</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">02</div>
+            <h3>Restaurant Websites</h3>
+            <p class="body-copy">Elegant and inviting sites for restaurants, cafés, and food businesses focused on discovery and trust.</p>
+            <ul class="service-list">
+              <li>Menu showcase</li>
+              <li>Gallery and story</li>
+              <li>Testimonials</li>
+              <li>Reservation or enquiry CTA</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">03</div>
+            <h3>Gym & Fitness Websites</h3>
+            <p class="body-copy">Dynamic websites that make programs, facilities, and membership options easy to understand.</p>
+            <ul class="service-list">
+              <li>Programs and services</li>
+              <li>Membership and pricing</li>
+              <li>Facilities showcase</li>
+              <li>Join or enquiry CTA</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">04</div>
+            <h3>Coaching & Education Websites</h3>
+            <p class="body-copy">Clear and encouraging websites for coaching centers, tutors, and educational programs.</p>
+            <ul class="service-list">
+              <li>Courses and programs</li>
+              <li>Student results</li>
+              <li>Admissions details</li>
+              <li>FAQ and enquiry CTA</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">05</div>
+            <h3>Portfolio & Personal Websites</h3>
+            <p class="body-copy">A polished online presence for students, professionals, creators, and freelancers.</p>
+            <ul class="service-list">
+              <li>Personal introduction</li>
+              <li>Skills and projects</li>
+              <li>Achievements and experience</li>
+              <li>Professional contact section</li>
+            </ul>
+          </article>
+
+          <article class="service-card" data-reveal>
+            <div class="service-icon" aria-hidden="true">06</div>
+            <h3>Landing Pages</h3>
+            <p class="body-copy">Focused, conversion-ready pages built around one idea, offer, or campaign goal.</p>
+            <ul class="service-list">
+              <li>Strong headline</li>
+              <li>Clear value proposition</li>
+              <li>Trust elements</li>
+              <li>High-impact call-to-action</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="process-section section-shell" aria-labelledby="process-title">
+        <div class="section-heading" data-reveal>
+          <p class="eyebrow">My Process</p>
+          <h2 id="process-title" class="display-title">From Idea to Launch</h2>
+          <p class="body-copy">A clear and collaborative process helps turn an idea into a website that is ready for real users.</p>
+        </div>
+
+        <div class="process-flow">
+          <article class="process-step" data-reveal>
+            <p class="process-step__number">01</p>
+            <h3>Discover</h3>
+            <p class="body-copy">Understand the business, audience, goals, services, and website requirements before building anything.</p>
+          </article>
+          <article class="process-step" data-reveal>
+            <p class="process-step__number">02</p>
+            <h3>Plan</h3>
+            <p class="body-copy">Define the structure, user flow, content direction, and visual direction in a clear framework.</p>
+          </article>
+          <article class="process-step" data-reveal>
+            <p class="process-step__number">03</p>
+            <h3>Design</h3>
+            <p class="body-copy">Create a modern interface focused on hierarchy, usability, responsiveness, and trust.</p>
+          </article>
+          <article class="process-step" data-reveal>
+            <p class="process-step__number">04</p>
+            <h3>Build</h3>
+            <p class="body-copy">Develop the website using clean HTML, CSS, Bootstrap, and JavaScript where needed.</p>
+          </article>
+          <article class="process-step" data-reveal>
+            <p class="process-step__number">05</p>
+            <h3>Refine</h3>
+            <p class="body-copy">Test responsiveness, interactions, layout consistency, accessibility, and visual details before launch.</p>
+          </article>
+          <article class="process-step" data-reveal>
+            <p class="process-step__number">06</p>
+            <h3>Deploy</h3>
+            <p class="body-copy">Prepare the final website for launch and make sure the client has a professional online presence.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section section-shell" aria-labelledby="contact-title">
+        <div class="contact-shell" data-reveal>
+          <div class="contact-copy">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-title" class="display-title">Have a Website Idea in Mind?</h2>
+            <p class="body-copy">Whether you are starting from scratch or improving an existing online presence, I would be happy to discuss your idea.</p>
+            <div>
+                  <strong>Phone</strong>
+                  <p class="mb-0"><a href="tel:+919535309463">+91 95353 09463</a></p>
+                </div>
+          </div>
+
+          
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="service">Project type</label>
+              <select id="service" name="service" required>
+                <option value="">Select a service</option>
+                <option value="Business Website">Business Website</option>
+                <option value="Restaurant Website">Restaurant Website</option>
+                <option value="Gym & Fitness Website">Gym & Fitness Website</option>
+                <option value="Coaching Website">Coaching Website</option>
+                <option value="Portfolio Website">Portfolio Website</option>
+                <option value="Landing Page">Landing Page</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Tell me about your idea, audience, goals, and timeline" required></textarea>
+            </div>
+            <div class="form-status" id="form-status" aria-live="polite" role="status"></div>
+            <button class="button-primary focus-ring" type="submit">Send Inquiry</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer section-shell" aria-labelledby="footer-title">
+        <div class="footer-shell">
+          <div class="footer-brand">
+            <p class="eyebrow">Portfolio</p>
+            <br/>
+            <h2 id="footer-title" class="display-title">Manoj R</h2>
+            <p class="body-copy">Aspiring web developer building clean, responsive, and purposeful digital experiences.</p>
+            
+          </div>
+          <div class="footer-links-group">
+            <div class="footer-group">
+              <h3>Explore</h3>
+              <div class="footer-links">
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#work">Work</a>
+                <a class="nav-link" href="#certificates">Certificates</a>
+                <a class="nav-link" href="#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <strong>Email</strong>
+          <p class="mb-0"><a href="mailto:manoj.techy13@gmail.com">manoj.techy13@gmail.com</a></p>
+        </div>
+
+        <br/>
+        <hr/>
+
+        <div class="footer-bottom">
+          <p class="footer-meta">© 2026 Manoj R. Crafted with care for modern web experiences.</p>
+          <p class="footer-note">Open to freelance work and meaningful collaborations.</p>
+        </div>
+      </footer>
+    </main>
+
+    <button class="back-to-top focus-ring" type="button" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="./assets/js/projects.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+  </body>
+</html>
