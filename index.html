@@ -18,6 +18,7 @@
       })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -34,6 +35,7 @@
       };
     </script>
     <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   </head>
   <body class="min-h-screen bg-surface font-sans text-ink antialiased transition-colors duration-300">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -99,30 +101,30 @@
 
           <article class="project-preview hero-project-card hero-project-card--primary restaurant" data-gsap="project-card">
             <div class="hero-project-card__media">
-              <img src="./assets/images/projects/restaurant.png" alt="Restaurant Website homepage preview" width="1905" height="928" loading="eager" decoding="async" />
+              <img src="./assets/images/projects/rezonx.webp" alt="Restaurant Website homepage preview" width="1905" height="928" loading="eager" decoding="async" />
             </div>
-            <div class="hero-project-card__label"><span>Restaurant Website</span></div>
+            <div class="hero-project-card__label"><span>RezonX Club</span></div>
           </article>
 
           <article class="project-preview hero-project-card hero-project-card--secondary gym" data-gsap="project-card">
             <div class="hero-project-card__media">
-              <img src="./assets/images/projects/gym.png" alt="Gym Website homepage preview" width="1907" height="927" loading="eager" decoding="async" />
+              <img src="./assets/images/projects/restaurant.webp" alt="Gym Website homepage preview" width="1907" height="927" loading="eager" decoding="async" />
             </div>
-            <div class="hero-project-card__label"><span>Gym Website</span></div>
+            <div class="hero-project-card__label"><span> Restaurant Website</span></div>
           </article>
 
           <article class="project-preview hero-project-card hero-project-card--tertiary coaching" data-gsap="project-card">
             <div class="hero-project-card__media">
-              <img src="./assets/images/projects/coaching-center.png" alt="Coaching Center Website homepage preview" width="1901" height="930" loading="eager" decoding="async" />
+              <img src="./assets/images/projects/coaching-center.webp" alt="Coaching Center Website homepage preview" width="1901" height="930" loading="eager" decoding="async" />
             </div>
             <div class="hero-project-card__label"><span>Coaching Center</span></div>
           </article>
 
           <article class="project-preview hero-project-card hero-project-card--accent rezonx" data-gsap="project-card" aria-hidden="true">
             <div class="hero-project-card__media">
-              <img src="./assets/images/projects/rezonx.png" alt="" width="1915" height="931" loading="eager" decoding="async" />
+              <img src="./assets/images/projects/gym.webp" alt="" width="1915" height="931" loading="eager" decoding="async" />
             </div>
-            <div class="hero-project-card__label"><span>RezonX Club</span></div>
+            <div class="hero-project-card__label"><span>Gym Website</span></div>
           </article>
         </div>
       </section>
@@ -170,7 +172,7 @@
         <div class="about-grid">
           <div class="about-portrait-card" data-reveal>
             <div class="about-portrait-frame">
-              <img src="./assets/images/projects/profile/profile.jpeg" alt="Portrait of Manoj R" width="640" height="800" loading="lazy" decoding="async" />
+              <img src="./assets/images/projects/profile/profile.webp" alt="Portrait of Manoj R" width="640" height="800" loading="lazy" decoding="async" />
             </div>
           </div>
 
@@ -246,7 +248,7 @@
         <div class="certificate-grid">
           <article class="certificate-card" data-reveal>
             <div class="certificate-media">
-              <img src="./assets/images/certificates/static-website-certificate.png" alt="Certificate for the Static Website course by NxtWave CCBP 4.0 Academy" loading="lazy" decoding="async" />
+              <img src="./assets/images/certificates/static-website-certificate.webp" alt="Certificate for the Static Website course by NxtWave CCBP 4.0 Academy" loading="lazy" decoding="async" />
             </div>
             <div class="certificate-content">
               <div class="certificate-meta">
@@ -260,7 +262,7 @@
 
           <article class="certificate-card" data-reveal>
             <div class="certificate-media">
-              <img src="./assets/images/certificates/responsive-website-certificate.png" alt="Certificate for the Build Your Own Responsive Website course by NxtWave CCBP 4.0 Academy" loading="lazy" decoding="async" />
+              <img src="./assets/images/certificates/responsive-website-certificate.webp" alt="Certificate for the Build Your Own Responsive Website course by NxtWave CCBP 4.0 Academy" loading="lazy" decoding="async" />
             </div>
             <div class="certificate-content">
               <div class="certificate-meta">
@@ -464,86 +466,267 @@
       </section>
 
       <section id="contact" class="contact-section section-shell" aria-labelledby="contact-title">
-        <div class="contact-shell" data-reveal>
-          <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2 id="contact-title" class="display-title">Have a Website Idea in Mind?</h2>
-            <p class="body-copy">Whether you are starting from scratch or improving an existing online presence, I would be happy to discuss your idea.</p>
-            <div>
-                  <strong>Phone</strong>
-                  <p class="mb-0"><a href="tel:+919535309463">+91 95353 09463</a></p>
-                </div>
-          </div>
 
-          
-          <form id="contact-form" class="contact-form" novalidate>
-            <div class="form-row">
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="you@example.com" required />
-              </div>
+    <div class="contact-shell" data-reveal>
+
+        <!-- LEFT SIDE -->
+
+        <div class="contact-copy">
+
+            <p class="eyebrow">Contact</p>
+
+            <h2 id="contact-title" class="display-title">
+                Let's Build Something Together
+            </h2>
+
+            <p class="body-copy">
+                Whether you're looking for a modern website, an internship collaboration,
+                or simply want to connect, I'd love to hear from you.
+            </p>
+
+            <div class="contact-info">
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:manoj.techy13@gmail.com">
+                            manoj.techy13@gmail.com
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+
+                    <div>
+                        <strong>Phone</strong>
+                        <a href="tel:+919535309463">
+                            +91 95353 09463
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i data-lucide="clock-3"></i>
+                    </div>
+
+                    <div>
+                        <strong>Response Time</strong>
+                        <p>Usually within 24 hours</p>
+                    </div>
+                </div>
+
             </div>
-            <div class="form-field">
-              <label for="service">Project type</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="Business Website">Business Website</option>
-                <option value="Restaurant Website">Restaurant Website</option>
-                <option value="Gym & Fitness Website">Gym & Fitness Website</option>
-                <option value="Coaching Website">Coaching Website</option>
-                <option value="Portfolio Website">Portfolio Website</option>
-                <option value="Landing Page">Landing Page</option>
-              </select>
-            </div>
-            <div class="form-field">
-              <label for="message">Project details</label>
-              <textarea id="message" name="message" placeholder="Tell me about your idea, audience, goals, and timeline" required></textarea>
-            </div>
-            <div class="form-status" id="form-status" aria-live="polite" role="status"></div>
-            <button class="button-primary focus-ring" type="submit">Send Inquiry</button>
-          </form>
+
+            <div class="contact-socials">
+
+    <a href="https://github.com/ManojR-cs"
+       target="_blank"
+       aria-label="GitHub">
+
+        <i class="fa-brands fa-github"></i>
+
+    </a>
+
+    <a href="https://www.linkedin.com/in/manoj-r-techy/"
+       target="_blank"
+       aria-label="LinkedIn">
+
+        <i class="fa-brands fa-linkedin-in"></i>
+
+    </a>
+
+    <a href="https://www.youtube.com/@MRajInstrumentals"
+       target="_blank"
+       aria-label="YouTube">
+
+        <i class="fa-brands fa-youtube"></i>
+
+    </a>
+
+</div>
+
         </div>
-      </section>
+
+        <!-- RIGHT SIDE -->
+
+        <form action="https://formsubmit.co/manoj.techy13@gmail.com" method="POST" id="contact-form" class="contact-form" novalidate>
+
+          <input type="hidden" name="_subject" value="New Portfolio Inquiry">
+
+          <input type="hidden" name="_captcha" value="false">
+
+          <input type="hidden" name="_template" value="table">
+
+            <div class="form-row">
+
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input id="name" type="text" placeholder="Your name" required>
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" placeholder="you@example.com" required>
+                </div>
+
+            </div>
+
+            <div class="form-field">
+
+                <label for="service">Project Type</label>
+
+                <select id="service" required>
+
+                    <option value="">Select a project</option>
+
+                    <option>Business Website</option>
+
+                    <option>Restaurant Website</option>
+
+                    <option>Gym Website</option>
+
+                    <option>Coaching Website</option>
+
+                    <option>Portfolio Website</option>
+
+                    <option>Landing Page</option>
+
+                    <option>Internship Opportunity</option>
+
+                </select>
+
+            </div>
+
+            <div class="form-field">
+
+                <label for="message">Message</label>
+
+                <textarea id="message"
+                    placeholder="Tell me about your project..."
+                    required></textarea>
+
+            </div>
+
+            <div class="form-status" id="form-status"></div>
+
+            <button class="button-primary" type="submit">
+
+                Send Message
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
 
       <footer class="footer section-shell" aria-labelledby="footer-title">
-        <div class="footer-shell">
-          <div class="footer-brand">
-            <p class="eyebrow">Portfolio</p>
-            <br/>
-            <h2 id="footer-title" class="display-title">Manoj R</h2>
-            <br/>
-            <p class="body-copy">Aspiring web developer building clean, responsive, and purposeful digital experiences.</p>
-            
-          </div>
-          <div class="footer-links-group">
-            <div class="footer-group">
-              <strong>Explore</strong>
-              <div class="footer-links">
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#work">Work</a>
-                <a class="nav-link" href="#certificates">Certificates</a>
-                <a class="nav-link" href="#contact">Contact</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <strong>Email</strong>
-          <p class="mb-0"><a href="mailto:manoj.techy13@gmail.com">manoj.techy13@gmail.com</a></p>
-        </div>
 
-        <br/>
-        <hr/>
+  <div class="footer-shell">
 
-        <div class="footer-bottom">
-          <p class="footer-meta">© 2026 Manoj R. Crafted with care for modern web experiences.</p>
-          <p class="footer-note">Open to freelance work and meaningful collaborations.</p>
-        </div>
-      </footer>
+    <div class="footer-brand">
+
+      <p class="eyebrow">Portfolio</p>
+
+      <h2 id="footer-title" class="display-title">
+        Manoj R
+      </h2>
+
+      <p class="body-copy">
+        Aspiring Web Developer passionate about building clean,
+        responsive and meaningful digital experiences.
+      </p>
+
+      <div class="footer-socials">
+
+        <a href="https://github.com/ManojR-cs"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="GitHub">
+          GitHub
+        </a>
+
+        <a href="https://www.linkedin.com/in/manoj-r-techy/"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="LinkedIn">
+          LinkedIn
+        </a>
+
+        <a href="mailto:manoj.techy13@gmail.com"
+           aria-label="Email">
+          Email
+        </a>
+
+        <a href="https://www.youtube.com/@MRajInstrumentals"
+           target="_blank"
+           rel="noopener noreferrer"
+           aria-label="YouTube">
+          YouTube
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-group">
+
+      <strong>Quick Links</strong>
+
+      <div class="footer-links">
+
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-group">
+
+      <strong>Contact</strong>
+
+      <p>
+        <a href="mailto:manoj.techy13@gmail.com">
+          manoj.techy13@gmail.com
+        </a>
+      </p>
+
+      <p>
+        <a href="tel:+919535309463">
+          +91 9535309463
+        </a>
+      </p>
+
+      <span class="availability">
+        ● Open to Internship & Freelance Opportunities
+      </span>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+
+    <p>© 2026 Manoj R. All Rights Reserved.</p>
+
+    <p>Designed &amp; Developed by Manoj R</p>
+
+  </div>
+
+</footer>
     </main>
 
     <button class="back-to-top focus-ring" type="button" aria-label="Back to top">
@@ -552,5 +735,10 @@
 
     <script src="./assets/js/projects.js" defer></script>
     <script src="./assets/js/main.js" defer></script>
+   <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
