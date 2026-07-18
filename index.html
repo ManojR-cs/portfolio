@@ -557,73 +557,118 @@
 
         <!-- RIGHT SIDE -->
 
-        <form action="https://formsubmit.co/manoj.techy13@gmail.com" method="POST" id="contact-form" class="contact-form" novalidate>
+        <form
+    action="https://formsubmit.co/manoj.techy13@gmail.com"
+    method="POST"
+    id="contact-form"
+    class="contact-form"
+    novalidate
+>
 
-          <input type="hidden" name="_subject" value="New Portfolio Inquiry">
+    <!-- FormSubmit Settings -->
+    <input type="hidden" name="_subject" value="New Portfolio Inquiry">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-          <input type="hidden" name="_captcha" value="false">
+    <div class="form-row">
 
-          <input type="hidden" name="_template" value="table">
+        <div class="form-field">
+            <label for="name">Name</label>
+            <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                autocomplete="name"
+                required
+            >
+        </div>
 
-            <div class="form-row">
+        <div class="form-field">
+            <label for="email">Email</label>
+            <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                autocomplete="email"
+                required
+            >
+        </div>
 
-                <div class="form-field">
-                    <label for="name">Name</label>
-                    <input id="name" type="text" placeholder="Your name" required>
-                </div>
+    </div>
 
-                <div class="form-field">
-                    <label for="email">Email</label>
-                    <input id="email" type="email" placeholder="you@example.com" required>
-                </div>
+    <div class="form-field">
 
-            </div>
+        <label for="service">Project Type</label>
 
-            <div class="form-field">
+        <select
+            id="service"
+            name="service"
+            required
+        >
+            <option value="">Select a project</option>
 
-                <label for="service">Project Type</label>
+            <option value="Business Website">
+                Business Website
+            </option>
 
-                <select id="service" required>
+            <option value="Restaurant Website">
+                Restaurant Website
+            </option>
 
-                    <option value="">Select a project</option>
+            <option value="Gym Website">
+                Gym Website
+            </option>
 
-                    <option>Business Website</option>
+            <option value="Coaching Website">
+                Coaching Website
+            </option>
 
-                    <option>Restaurant Website</option>
+            <option value="Portfolio Website">
+                Portfolio Website
+            </option>
 
-                    <option>Gym Website</option>
+            <option value="Landing Page">
+                Landing Page
+            </option>
 
-                    <option>Coaching Website</option>
+            <option value="Internship Opportunity">
+                Internship Opportunity
+            </option>
 
-                    <option>Portfolio Website</option>
+        </select>
 
-                    <option>Landing Page</option>
+    </div>
 
-                    <option>Internship Opportunity</option>
+    <div class="form-field">
 
-                </select>
+        <label for="message">Message</label>
 
-            </div>
+        <textarea
+            id="message"
+            name="message"
+            placeholder="Tell me about your project..."
+            rows="6"
+            required
+        ></textarea>
 
-            <div class="form-field">
+    </div>
 
-                <label for="message">Message</label>
+    <div
+        class="form-status"
+        id="form-status"
+        aria-live="polite"
+    ></div>
 
-                <textarea id="message"
-                    placeholder="Tell me about your project..."
-                    required></textarea>
+    <button
+        class="button-primary"
+        type="submit"
+    >
+        Send Message
+    </button>
 
-            </div>
-
-            <div class="form-status" id="form-status"></div>
-
-            <button class="button-primary" type="submit">
-
-                Send Message
-
-            </button>
-
-        </form>
+</form>
 
     </div>
 
