@@ -116,29 +116,38 @@ const formStatus = document.querySelector('#form-status');
 
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
 
     const formData = new FormData(contactForm);
+
     const name = String(formData.get('name') || '').trim();
     const email = String(formData.get('email') || '').trim();
     const service = String(formData.get('service') || '').trim();
     const message = String(formData.get('message') || '').trim();
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!name || !email || !service || !message) {
+      event.preventDefault();
+
       formStatus.className = 'form-status is-error';
-      formStatus.textContent = 'Please complete every field so I can understand your idea clearly.';
+      formStatus.textContent =
+        'Please complete every field so I can understand your idea clearly.';
       return;
     }
 
     if (!emailPattern.test(email)) {
+      event.preventDefault();
+
       formStatus.className = 'form-status is-error';
-      formStatus.textContent = 'Please enter a valid email address so I can reply to your message.';
+      formStatus.textContent =
+        'Please enter a valid email address so I can reply to your message.';
       return;
     }
 
     formStatus.className = 'form-status is-success';
-    formStatus.textContent = 'Thanks for reaching out. Your inquiry has been prepared locally in this preview and is ready for the next step.';
-    contactForm.reset();
+    formStatus.textContent = 'Sending your message...';
+
+    // Do NOT call preventDefault().
+    // Browser submits the form to FormSubmit.
   });
 }
